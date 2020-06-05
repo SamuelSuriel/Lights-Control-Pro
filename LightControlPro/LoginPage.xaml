@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LightControlPro.LoginPage"
+             Title="Login Page">
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterLayout">
+
+
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Label Text="Login" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center" 
+                   FontSize="36" 
+                   TextColor="#ff9800"                  
+                   />
+                <AbsoluteLayout>
+                    <Image Source="ic_lcp8.png"
+                       Margin="150,25,10,0"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" />
+                </AbsoluteLayout>
+
+            </StackLayout>
+
+            <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness">
+                        <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+
+                </StackLayout.Padding>
+
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="False" />
+
+                <Label x:Name="Lbl_Username" Text="Username" TextColor="White" />
+                <Entry x:Name="Entry_Username" Placeholder="Username"></Entry>
+                <Label x:Name="Lbl_Password" Text="Password" TextColor="White" />
+                <Entry x:Name="Entry_Password" Placeholder="Password"></Entry>
+
+                <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="CenterAndExpand">
+                    <Label Text="Save device:" 
+                       Margin="10,0,0,0" />
+                    <Switch HorizontalOptions="Center" 
+                        IsToggled="False" />
+                </StackLayout>
+
+                <Button x:Name="Btn_Signin" 
+                    Text="Sign in" 
+                    TextColor="White"
+                    IsEnabled="False"
+                    Clicked="SignInProcedureAsync" 
+                    BackgroundColor="#ff9800" />
+
+                <!--<Button x:Name="ButtonSkip"
+            Text="Skip"
+                    Clicked="ButtonSkip_Clicked"
+            VerticalOptions="Center"
+                        />-->
+            </StackLayout>
+            <StackLayout BackgroundColor="Black" VerticalOptions="EndAndExpand">
+                <Label Text="**TU PUBLICIDAD AQUI!**" 
+                           HorizontalTextAlignment="Center"
+                            HeightRequest="30"
+                           TextColor="White"
+                       FontAttributes="Bold"
+                       IsVisible="False"
+                       />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
