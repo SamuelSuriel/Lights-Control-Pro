@@ -7,3 +7,6 @@ el gasto innecesario de energia electrica.
 
 La aplicación también la hice pensando en incluirle un módulo de control automático o manual mediante 
 Wireless (domótica).
+
+Pantallas de la app
+![lcpro](https://github.com/user-attachments/assets/5dda7eca-e16b-45c7-933a-67bfdef44c01)
